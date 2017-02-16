@@ -21,6 +21,10 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+// For 'PATH_MAX' constant and 'dirname' function
+#include <limits.h>
+#include <libgen.h>
+
 #include "boost/filesystem.hpp"
 
 #include "Vector3.h"
