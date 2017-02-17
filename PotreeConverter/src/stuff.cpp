@@ -209,7 +209,7 @@ string getExecutablePath(){
     ssize_t len = ::readlink("/proc/self/exe", buff, sizeof(buff)-1);
     if (len != -1) {
       buff[len] = '\0';
-      path = string(buff);
+      path = string(dirname(buff));
     }else{
 		cout << "WARNING: Potree was unable to determine to path to the executable." << endl;
 		cout << "Using current work dir as executable directory. Make sure to run potree inside the directory with the executable to avoid problems." << endl;
